@@ -1,0 +1,28 @@
+pipeline{
+	
+	agent any
+
+	stages{
+		stage('build'){
+			steps{
+				println "Build"
+			}
+
+		}
+
+		stage('Test'){
+			steps{
+				println "Test"
+			}
+
+
+		}
+
+		stage('Deploy'){
+			stemps{
+				println "Deploy"
+			}
+		}
+	}
+
+}
