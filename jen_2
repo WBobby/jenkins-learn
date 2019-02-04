@@ -19,7 +19,7 @@ pipeline{
 		}
 
 		stage('Deploy'){
-			stemps{
+			steps{
 				println "Deploy"
 			}
 		}
