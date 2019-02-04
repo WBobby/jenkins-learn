@@ -1,0 +1,19 @@
+pipeline{
+
+    agent {
+        label 'xxx-agent-machine'
+        customWorkspace "${env.JOB_NAME}/${env.BUILD_NUMBER}"
+    }
+
+    stages{
+        stage ('Build'){
+            echo 'Build Start...'
+            sh 'ls -al'
+        }
+
+        stage ('Test'){
+            echo 'Test start...'
+            sh "echo ${JAVA_HOME}"
+        }
+    }
+}
