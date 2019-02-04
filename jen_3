@@ -7,12 +7,12 @@ pipeline{
 
     stages{
         stage ('Build'){
-            echo 'Build Start...'
+            println 'Build Start...'
             sh 'ls -al'
         }
 
         stage ('Test'){
-            echo 'Test start...'
+            println 'Test start...'
             sh "echo ${JAVA_HOME}"
         }
     }
