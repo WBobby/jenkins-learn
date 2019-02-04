@@ -4,13 +4,18 @@ pipeline{
 
     stages{
         stage ('Build'){
-            println 'Build Start...'
+            steps{
+                println 'Build Start...'
             sh 'ls -al'
+            }
+            
         }
 
         stage ('Test'){
-            println 'Test start...'
-            sh "echo ${JAVA_HOME}"
+            steps{
+                println 'Test start...'
+                sh "echo ${JAVA_HOME}"
+            }            
         }
     }
 }
