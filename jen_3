@@ -14,6 +14,7 @@ pipeline{
             steps{
                 script{
                     sh "java -version"
+                    println "username is " + userName + " and version choice is " + version[1]
                 }
             }
         }
