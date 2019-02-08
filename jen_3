@@ -14,7 +14,11 @@ pipeline{
             steps{
                 script{
                     sh "java -version"
-                    println "username is " + userName + " and version choice is " + version[1]
+                    println "username is " + userName 
+
+                    for (int i = 0; i < version.size(); i++)){
+                        println "version [" + i + "] = " + version[i]
+                    }
                 }
             }
         }
