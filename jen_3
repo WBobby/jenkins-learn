@@ -16,7 +16,7 @@ pipeline{
                     sh "java -version"
                     println "username is " + userName 
 
-                    for (int i = 0; i < version.size(); i++)){
+                    for (int i = 0; i < version.size(); i++){
                         println "version [" + i + "] = " + version[i]
                     }
                 }
