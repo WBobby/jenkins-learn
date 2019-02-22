@@ -13,17 +13,19 @@ println Global.name
 pipeline{
 	
     agent any
+    
     stages{
+    
 	stage("deleteDir") {
 	    steps{
-		script{
-			sh("echo ${Global.name})
-		    sh("ls -al ${env.WORKSPACE}")
-		    sh("mkdir -p abc")
-		    sh("ls -al ${env.WORKSPACE}")
-		    deleteDir()  // clean up current work directory
-		    sh("ls -al ${env.WORKSPACE}")
-		}
+			script{
+				
+			    sh("ls -al ${env.WORKSPACE}")
+			    sh("mkdir -p abc")
+			    sh("ls -al ${env.WORKSPACE}")
+			    deleteDir()  // clean up current work directory
+			    sh("ls -al ${env.WORKSPACE}")
+			}
 	    }
 	}
     }
