@@ -11,12 +11,16 @@ class Global{
 println Global.name
 
 pipeline{
+	environment{
+		Name = Global.name
+	}
 	
     agent any
     stages{
 	stage("deleteDir") {
 	    steps{
 		script{
+			sh("echo $Name")
 			sh("echo ${Global.name})
 		    sh("ls -al ${env.WORKSPACE}")
 		    sh("mkdir -p abc")
