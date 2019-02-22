@@ -12,7 +12,7 @@ println Global.name
 
 pipeline{
 	environment{
-		Name = Global.name
+		Name = "foo"
 	}
 	
     agent any
@@ -21,7 +21,7 @@ pipeline{
 	    steps{
 		script{
 			sh("echo $Name")
-			sh("echo ${Global.name})
+
 		    sh("ls -al ${env.WORKSPACE}")
 		    sh("mkdir -p abc")
 		    sh("ls -al ${env.WORKSPACE}")
