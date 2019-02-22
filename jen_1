@@ -2,7 +2,14 @@ import hudson.model.*;
  
 println env.JOB_NAME
 println env.BUILD_NUMBER
- 
+
+class Global{
+	static String name = "Bobby"
+	static String id = "001"
+}
+
+println Global.name
+
 pipeline{
 	
     agent any
