@@ -17,6 +17,7 @@ pipeline{
 	stage("deleteDir") {
 	    steps{
 		script{
+			sh("echo ${Global.name})
 		    sh("ls -al ${env.WORKSPACE}")
 		    sh("mkdir -p abc")
 		    sh("ls -al ${env.WORKSPACE}")
